@@ -2,61 +2,86 @@
 <html>
 <head>
 	<title>My Portfolio</title>
+	<!-- Include Foundation CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css">
+	<!-- Include custom CSS -->
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="container">
-		<div class="profile">
-			<img src="profile-pic.jpg" alt="My Profile Picture">
-			<h1>Megan Tee</h1>
-			<h2>Full-Stack Developer</h2>
-		</div>
-		<div class="about-me">
-			<h3>About Me</h3>
-			<p>I am a full-stack developer with 2 years of experience in creating responsive websites using HTML, CSS, and JavaScript.
-				I am familiar with MongoDB, SQL, as well as Node.js for the backend. I also have background in Python. 
-				</p>
-		<div class="skills">
-			<h3>Skills</h3>
-			<ul>
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>JavaScript</li>
-				<li>Bootstrap</li>
-				<li>jQuery</li>
-				<li>Node.js</li>
-				<li>MongoDb</li>
-				<li>SQL</li>
-				<li>Python</li>
-			</ul>
-		</div>
-
-		<div class="links">
-			<a href="https://www.linkedin.com/in/megan-tee-hy/">LinkedIn</a>
-		</div>	
-		<!-- <div class="projects">
-			<h3>Projects</h3>
-			<div class="project">
-				<h4>Project 1</h4>
-				<p>An app for a membership website</p>
-			</div>
-			<div class="project">
-				<h4>Project 2</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat enim vitae sapien auctor hendrerit. Sed commodo diam eget nisi vestibulum eleifend.</p>
+	<header>
+		<div class="row">
+			<div class="columns">
+				<h1>My Portfolio</h1>
 			</div>
 		</div>
-		<div class="contact">
-			<h3>Contact Me</h3>
-			<form>
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="name" required>
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" required>
-				<label for="message">Message:</label>
-				<textarea id="message" name="message" required></textarea>
-				<input type="submit" value="Send">
-			</form>
-		</div> -->
-	</div>
-</body>
-</html>
+	</header>
+	<section class="intro">
+		<div class="row">
+			<div class="columns medium-4">
+				<img src="profile-pic.jpg" alt="Profile Picture">
+			</div>
+			<div class="columns medium-8">
+				<h2>Hello, I'm Megan Tee</h2>
+				<p>I'm a web developer with experience in HTML, CSS, and JavaScript. 
+				I'm passionate about creating highly scalable, functional and beautiful websites.</p>
+			</div>
+		</div>
+	</section>
+	<section class="skills">
+		<div class="row">
+			<div class="columns">
+				<h2>My Skills</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="columns medium-6">
+				<h3>Front-End Development</h3>
+				<ul>
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>JavaScript</li>
+					<li>jQuery</li>
+				</ul>
+			</div>
+			<div class="columns medium-6">
+				<h3>Back-End Development</h3>
+				<ul>
+					<li>Python</li>
+					<li>MySQL</li>
+					<li>Node.js</li>
+					<li>Express</li>
+					<li>MongoDB</li>
+					<li>Firebase</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- <section class="projects">
+		<div class="row">
+			<div class="columns">
+				<h2>My Projects</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="columns medium-6">
+				<h3>Project 1</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod, velit eu lacinia laoreet, augue nibh interdum mi, eu euismod est orci sed massa.</p>
+				<a href="#">View Project</a>
+			</div>
+			<div class="columns medium-6">
+				<h3>Project 2</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod, velit eu lacinia laoreet, augue nibh interdum mi, eu euismod est orci sed massa.</p>
+				<a href="#">View Project</a>
+			</div>
+		</div>
+	</section> -->
+	<footer>
+		<div class="row">
+			<div class="columns">
+				<p>&copy; 2023 John Smith. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+	<!-- Include jQuery and Foundation JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5
