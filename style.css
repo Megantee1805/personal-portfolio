@@ -2,12 +2,12 @@
    CSS Variables & Root Styles
    ============================================ */
 :root {
-    --primary-color: #6366f1;
-    --primary-dark: #4f46e5;
-    --primary-light: #818cf8;
-    --secondary-color: #10b981;
-    --secondary-dark: #059669;
-    --accent-color: #f59e0b;
+    --primary-color: #f97316;
+    --primary-dark: #ea580c;
+    --primary-light: #fb923c;
+    --secondary-color: #0ea5e9;
+    --secondary-dark: #0284c7;
+    --accent-color: #f43f5e;
 
     --text-primary: #1f2937;
     --text-secondary: #6b7280;
@@ -17,10 +17,10 @@
     --bg-secondary: #f9fafb;
     --bg-dark: #111827;
 
-    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-1: linear-gradient(135deg, #f97316 0%, #f43f5e 100%);
+    --gradient-2: linear-gradient(135deg, #0ea5e9 0%, #818cf8 100%);
+    --gradient-3: linear-gradient(135deg, #22d3ee 0%, #a855f7 100%);
+    --gradient-primary: linear-gradient(135deg, #f97316 0%, #f43f5e 100%);
 
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -198,66 +198,111 @@ button {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: radial-gradient(circle at 10% 20%, rgba(250, 232, 255, 0.85) 0%, rgba(250, 232, 255, 0) 45%),
+        radial-gradient(circle at 85% 15%, rgba(254, 243, 199, 0.95) 0%, rgba(254, 243, 199, 0) 40%),
+        linear-gradient(135deg, #f8fafc 0%, #e0f2fe 50%, #ede9fe 100%);
     position: relative;
     overflow: hidden;
-    padding: 100px 20px 80px;
+    padding: 120px 20px 90px;
 }
 
 .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background:
-        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.12) 0%, transparent 60%),
+        radial-gradient(circle at 70% 60%, rgba(244, 63, 94, 0.12) 0%, transparent 55%);
     pointer-events: none;
 }
 
-.hero-content {
-    text-align: center;
-    color: white;
+.hero-grid {
     position: relative;
     z-index: 1;
-    animation: fadeInUp 1s ease;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-main {
+    grid-column: span 7;
+    color: var(--text-primary);
+}
+
+.hero-side {
+    grid-column: span 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
 }
 
 .profile-image-container {
-    margin-bottom: 30px;
+    background: var(--gradient-2);
+    padding: 6px;
+    border-radius: 24px;
+    box-shadow: 0 25px 45px rgba(15, 23, 42, 0.18);
 }
 
 .profile-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    margin: 0 auto;
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
     object-fit: cover;
-    animation: float 3s ease-in-out infinite;
+    display: block;
 }
 
 .hero-title {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 3.2rem;
+    margin-bottom: 18px;
     font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 400;
-    opacity: 0.9;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--secondary-dark);
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .hero-description {
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     margin-bottom: 40px;
-    opacity: 0.9;
+    color: var(--text-secondary);
+    max-width: 620px;
+}
+
+.hero-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-bottom: 38px;
+}
+
+.highlight-card {
+    background: white;
+    border-radius: 18px;
+    padding: 18px 22px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.highlight-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.highlight-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.5;
 }
 
 .hero-highlights {
@@ -291,26 +336,67 @@ button {
 
 .hero-buttons {
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    gap: 18px;
     flex-wrap: wrap;
 }
 
-.hero-contact {
-    margin-top: 35px;
+.hero-card {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 30px 45px rgba(15, 23, 42, 0.1);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    backdrop-filter: blur(12px);
+}
+
+.hero-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: var(--text-primary);
+}
+
+.hero-card-list {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.hero-card-list li {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
     font-weight: 500;
-    letter-spacing: 0.3px;
+    color: var(--text-primary);
 }
 
-.hero-contact span {
-    background: rgba(255, 255, 255, 0.18);
-    border-radius: 999px;
-    padding: 10px 18px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+.hero-card-list li span {
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+}
+
+.hero-card-list li strong,
+.hero-card-list li a {
+    font-size: 1rem;
+}
+
+.hero-card-list li strong {
+    font-weight: 600;
+}
+
+.hero-card-list li a {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.hero-card-footnote {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
 }
 
 .btn {
@@ -325,25 +411,24 @@ button {
 }
 
 .btn-primary {
-    background: white;
-    color: var(--primary-color);
-    box-shadow: var(--shadow-lg);
+    background: var(--gradient-1);
+    color: white;
+    box-shadow: 0 18px 30px rgba(249, 115, 22, 0.25);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 22px 35px rgba(244, 63, 94, 0.25);
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    color: var(--primary-dark);
+    border: 2px solid rgba(249, 115, 22, 0.3);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(249, 115, 22, 0.08);
     transform: translateY(-2px);
 }
 
@@ -658,8 +743,8 @@ button {
 .language-tag {
     padding: 10px 18px;
     border-radius: 999px;
-    background: rgba(99, 102, 241, 0.12);
-    color: var(--primary-dark);
+    background: rgba(14, 165, 233, 0.15);
+    color: var(--secondary-dark);
     font-weight: 600;
     letter-spacing: 0.4px;
 }
@@ -978,8 +1063,32 @@ button {
         grid-template-columns: 1fr;
     }
 
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-main {
+        grid-column: span 12;
+    }
+
+    .hero-side {
+        grid-column: span 12;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
     .hero-highlights {
         grid-template-columns: 1fr;
+    }
+
+    .hero-card {
+        text-align: center;
+    }
+
+    .hero-card-list li {
+        flex-direction: column;
+        align-items: center;
     }
 
     .timeline::before {
@@ -1005,18 +1114,11 @@ button {
     }
 
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.16em;
     }
 
     .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-
-    .btn {
-        width: 100%;
         justify-content: center;
     }
 
@@ -1079,9 +1181,25 @@ button {
         padding: 80px 15px 60px;
     }
 
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
     .profile-img {
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
     }
 
     .hero-title {
