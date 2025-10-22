@@ -30,7 +30,7 @@
     --border-radius: 12px;
     --transition: all 0.3s ease;
 
-    --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* ============================================
@@ -258,6 +258,7 @@ button {
     font-size: 1.1rem;
     margin-bottom: 40px;
     opacity: 0.9;
+<<<<<<< HEAD
 }
 
 .hero-highlights {
@@ -287,6 +288,8 @@ button {
 .highlight-label {
     font-weight: 500;
     line-height: 1.6;
+=======
+>>>>>>> parent of b945360 (Refresh hero design and update profile content)
 }
 
 .hero-buttons {
@@ -296,6 +299,7 @@ button {
     flex-wrap: wrap;
 }
 
+<<<<<<< HEAD
 .hero-contact {
     margin-top: 35px;
     display: flex;
@@ -313,6 +317,8 @@ button {
     border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
+=======
+>>>>>>> parent of b945360 (Refresh hero design and update profile content)
 .btn {
     padding: 12px 30px;
     border-radius: var(--border-radius);
@@ -383,26 +389,6 @@ button {
     font-size: 1.1rem;
     color: var(--text-secondary);
     line-height: 1.8;
-}
-
-.impact-list {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    font-size: 1rem;
-    color: var(--text-secondary);
-}
-
-.impact-list li {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    line-height: 1.7;
-}
-
-.impact-list span {
-    font-size: 1.3rem;
-    line-height: 1;
 }
 
 .about-stats {
@@ -484,14 +470,6 @@ button {
 .skill-description {
     color: var(--text-secondary);
     font-size: 0.95rem;
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-    justify-content: center;
 }
 
 /* ============================================
@@ -589,6 +567,7 @@ button {
 }
 
 /* ============================================
+<<<<<<< HEAD
    Education Section
    ============================================ */
 .education {
@@ -767,6 +746,8 @@ button {
 }
 
 /* ============================================
+=======
+>>>>>>> parent of b945360 (Refresh hero design and update profile content)
    Contact Section
    ============================================ */
 .contact {
@@ -780,44 +761,68 @@ button {
     align-items: start;
 }
 
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.contact-intro {
-    color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: 10px;
-}
-
-.contact-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    background: var(--bg-primary);
-    padding: 18px 20px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-sm);
-    border: 1px solid rgba(99, 102, 241, 0.15);
-}
-
-.contact-list span {
-    font-weight: 600;
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
     color: var(--text-primary);
 }
 
-.contact-list a {
+.contact-info p {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--text-secondary);
+}
+
+.contact-item i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: 50%;
+    font-size: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+    border-radius: 50%;
     color: var(--primary-color);
-    font-weight: 500;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background: var(--gradient-primary);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .contact-form {
@@ -869,32 +874,11 @@ button {
     background: var(--bg-dark);
     color: white;
     padding: 30px 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    text-align: center;
 }
 
 .footer p {
     opacity: 0.8;
-}
-
-.footer-links {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-links a {
-    color: white;
-    opacity: 0.8;
-}
-
-.footer-links a:hover {
-    opacity: 1;
 }
 
 /* ============================================
@@ -977,6 +961,7 @@ button {
     .contact-content {
         grid-template-columns: 1fr;
     }
+<<<<<<< HEAD
 
     .hero-highlights {
         grid-template-columns: 1fr;
@@ -989,6 +974,8 @@ button {
     .timeline-item {
         padding-left: 60px;
     }
+=======
+>>>>>>> parent of b945360 (Refresh hero design and update profile content)
 }
 
 @media (max-width: 768px) {
@@ -1045,32 +1032,6 @@ button {
 
     .stat-label {
         font-size: 0.8rem;
-    }
-
-    .timeline::before {
-        left: 0;
-    }
-
-    .timeline-item {
-        padding-left: 0;
-    }
-
-    .timeline-marker {
-        display: none;
-    }
-
-    .timeline-content {
-        padding: 25px;
-    }
-
-    .contact-list li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
     }
 }
 

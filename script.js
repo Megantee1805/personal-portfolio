@@ -113,30 +113,6 @@ skillCards.forEach((card, index) => {
     observer.observe(card);
 });
 
-// Observe experience timeline
-const timelineItems = document.querySelectorAll('.timeline-item');
-timelineItems.forEach((item, index) => {
-    item.classList.add('fade-in');
-    item.style.transitionDelay = `${index * 0.15}s`;
-    observer.observe(item);
-});
-
-// Observe education cards
-const educationCards = document.querySelectorAll('.education-card');
-educationCards.forEach((card, index) => {
-    card.classList.add('fade-in');
-    card.style.transitionDelay = `${index * 0.1}s`;
-    observer.observe(card);
-});
-
-// Observe contact list items
-const contactItems = document.querySelectorAll('.contact-list li');
-contactItems.forEach((item, index) => {
-    item.classList.add('fade-in');
-    item.style.transitionDelay = `${index * 0.08}s`;
-    observer.observe(item);
-});
-
 // Observe project cards
 const projectCards = document.querySelectorAll('.project-card');
 projectCards.forEach((card, index) => {
@@ -280,10 +256,13 @@ if (scrollIndicator) {
 // ============================================
 // Dynamic Year in Footer
 // ============================================
-const currentYearEl = document.getElementById('currentYear');
-if (currentYearEl) {
-    currentYearEl.textContent = new Date().getFullYear();
-}
+window.addEventListener('DOMContentLoaded', () => {
+    const footer = document.querySelector('.footer p');
+    if (footer) {
+        const currentYear = new Date().getFullYear();
+        footer.innerHTML = `&copy; ${currentYear} Megan Tee. Built with passion and code.`;
+    }
+});
 
 // ============================================
 // Performance: Reduce animations on slower devices
