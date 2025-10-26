@@ -258,7 +258,6 @@ button {
     font-size: 1.1rem;
     margin-bottom: 40px;
     opacity: 0.9;
-<<<<<<< HEAD
 }
 
 .hero-highlights {
@@ -288,8 +287,6 @@ button {
 .highlight-label {
     font-weight: 500;
     line-height: 1.6;
-=======
->>>>>>> parent of b945360 (Refresh hero design and update profile content)
 }
 
 .hero-buttons {
@@ -299,7 +296,6 @@ button {
     flex-wrap: wrap;
 }
 
-<<<<<<< HEAD
 .hero-contact {
     margin-top: 35px;
     display: flex;
@@ -317,8 +313,6 @@ button {
     border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-=======
->>>>>>> parent of b945360 (Refresh hero design and update profile content)
 .btn {
     padding: 12px 30px;
     border-radius: var(--border-radius);
@@ -567,7 +561,6 @@ button {
 }
 
 /* ============================================
-<<<<<<< HEAD
    Education Section
    ============================================ */
 .education {
@@ -746,8 +739,6 @@ button {
 }
 
 /* ============================================
-=======
->>>>>>> parent of b945360 (Refresh hero design and update profile content)
    Contact Section
    ============================================ */
 .contact {
@@ -961,7 +952,6 @@ button {
     .contact-content {
         grid-template-columns: 1fr;
     }
-<<<<<<< HEAD
 
     .hero-highlights {
         grid-template-columns: 1fr;
@@ -974,8 +964,6 @@ button {
     .timeline-item {
         padding-left: 60px;
     }
-=======
->>>>>>> parent of b945360 (Refresh hero design and update profile content)
 }
 
 @media (max-width: 768px) {
