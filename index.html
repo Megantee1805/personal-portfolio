@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<<<<<<< HEAD
     <header class="navbar" id="navbar">
         <div class="nav-container">
             <a class="nav-logo" href="#home">MT</a>
@@ -18,7 +17,7 @@
                 <a class="nav-link" href="#skills">Skills</a>
                 <a class="nav-link" href="#experience">Experience</a>
                 <a class="nav-link" href="#education">Education</a>
-                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="#contact" id="contact-link">Contact</a>
             </nav>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
@@ -55,7 +54,7 @@
                         </div>
                     </div>
                     <div class="hero-buttons">
-                        <a class="btn btn-primary" href="#contact">Let's Collaborate</a>
+                        <a class="btn btn-primary" href="#contact" id="contact-button">Let's Collaborate</a>
                         <a class="btn btn-secondary" href="https://megantee.carrd.co/" target="_blank" rel="noopener">View Digital Profile</a>
                     </div>
                     <div class="hero-contact">
@@ -258,41 +257,44 @@
                 </div>
             </div>
         </section>
-
-        <section class="section contact" id="contact">
-            <div class="container">
-                <h2 class="section-title">Let's Build Something Impactful</h2>
-                <div class="section-divider"></div>
-                <div class="contact-content">
-                    <div class="contact-details">
-                        <p class="contact-intro">Have an opportunity that blends data, creativity, and purpose? I'm always excited to explore meaningful collaborations.</p>
-                        <ul class="contact-list">
-                            <li><span>Phone</span><a href="tel:+6585696578">+65 8569 6578</a></li>
-                            <li><span>Email</span><a href="mailto:teehymegan@gmail.com">teehymegan@gmail.com</a></li>
-                            <li><span>Location</span>Singapore</li>
-                            <li><span>Portfolio</span><a href="https://megantee.carrd.co/" target="_blank" rel="noopener">megantee.carrd.co</a></li>
-                        </ul>
-                    </div>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Tell me about your project" required></textarea>
-                        </div>
-                        <button class="btn btn-primary btn-block" type="submit">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
     </main>
-
+    <div class="modal" id="contact-modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <section class="section contact" id="contact">
+                <div class="container">
+                    <h2 class="section-title">Let's Build Something Impactful</h2>
+                    <div class="section-divider"></div>
+                    <div class="contact-content">
+                        <div class="contact-details">
+                            <p class="contact-intro">Have an opportunity that blends data, creativity, and purpose? I'm always excited to explore meaningful collaborations.</p>
+                            <ul class="contact-list">
+                                <li><span>Phone</span><a href="tel:+6585696578">+65 8569 6578</a></li>
+                                <li><span>Email</span><a href="mailto:teehymegan@gmail.com">teehymegan@gmail.com</a></li>
+                                <li><span>Location</span>Singapore</li>
+                                <li><span>Portfolio</span><a href="https://megantee.carrd.co/" target="_blank" rel="noopener">megantee.carrd.co</a></li>
+                            </ul>
+                        </div>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell me about your project" required></textarea>
+                            </div>
+                            <button class="btn btn-primary btn-block" type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
     <footer class="footer">
         <div class="container footer-content">
             <p>&copy; <span id="currentYear"></span> Megan Tee. Crafted with curiosity, compassion, and code.</p>
@@ -306,82 +308,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-=======
-	<header>
-		<div class="row">
-			<div class="columns">
-				<h1>My Portfolio</h1>
-			</div>
-		</div>
-	</header>
-	<section class="intro">
-		<div class="row">
-			<div class="columns medium-4">
-				<img src="profile-pic.jpg" alt="Profile Picture">
-			</div>
-			<div class="columns medium-8">
-				<h2>Hello, I'm Megan Tee</h2>
-				<p>I'm a web developer with experience in HTML, CSS, and JavaScript. 
-				I'm passionate about creating highly scalable, functional and beautiful websites.</p>
-			</div>
-		</div>
-	</section>
-	<section class="skills">
-		<div class="row">
-			<div class="columns">
-				<h2>My Skills</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="columns medium-6">
-				<h3>Front-End Development</h3>
-				<ul>
-					<li>HTML</li>
-					<li>CSS</li>
-					<li>JavaScript</li>
-					<li>jQuery</li>
-				</ul>
-			</div>
-			<div class="columns medium-6">
-				<h3>Back-End Development</h3>
-				<ul>
-					<li>Python</li>
-					<li>MySQL</li>
-					<li>Node.js</li>
-					<li>Express</li>
-					<li>MongoDB</li>
-					<li>Firebase</li>
-				</ul>
-			</div>
-		</div>
-	</section>
-	<!-- <section class="projects">
-		<div class="row">
-			<div class="columns">
-				<h2>My Projects</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="columns medium-6">
-				<h3>Project 1</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod, velit eu lacinia laoreet, augue nibh interdum mi, eu euismod est orci sed massa.</p>
-				<a href="#">View Project</a>
-			</div>
-			<div class="columns medium-6">
-				<h3>Project 2</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod, velit eu lacinia laoreet, augue nibh interdum mi, eu euismod est orci sed massa.</p>
-				<a href="#">View Project</a>
-			</div>
-		</div>
-	</section> -->
-	<footer>
-		<div class="row">
-			<div class="columns">
-				<p>&copy; 2023 John Smith. All rights reserved.</p>
-			</div>
-		</div>
-	</footer>
-	<!-- Include jQuery and Foundation JavaScript -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5
->>>>>>> parent of b945360 (Refresh hero design and update profile content)

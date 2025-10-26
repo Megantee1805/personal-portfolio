@@ -296,3 +296,30 @@ console.log('%c👋 Hey there! Thanks for checking out my portfolio!',
     'color: #667eea; font-size: 16px; font-weight: bold;');
 console.log('%cInterested in the code? Check it out on GitHub!',
     'color: #6b7280; font-size: 14px;');
+
+// ============================================
+// Contact Modal
+// ============================================
+const contactModal = document.getElementById('contact-modal');
+const contactButton = document.getElementById('contact-button');
+const contactLink = document.getElementById('contact-link');
+const closeButton = document.querySelector('.close-button');
+
+contactButton.addEventListener('click', () => {
+    contactModal.style.display = 'block';
+});
+
+contactLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    contactModal.style.display = 'block';
+});
+
+closeButton.addEventListener('click', () => {
+    contactModal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target == contactModal) {
+        contactModal.style.display = 'none';
+    }
+});
