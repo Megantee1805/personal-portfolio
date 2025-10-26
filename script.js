@@ -113,30 +113,6 @@ skillCards.forEach((card, index) => {
     observer.observe(card);
 });
 
-// Observe experience timeline
-const timelineItems = document.querySelectorAll('.timeline-item');
-timelineItems.forEach((item, index) => {
-    item.classList.add('fade-in');
-    item.style.transitionDelay = `${index * 0.15}s`;
-    observer.observe(item);
-});
-
-// Observe education cards
-const educationCards = document.querySelectorAll('.education-card');
-educationCards.forEach((card, index) => {
-    card.classList.add('fade-in');
-    card.style.transitionDelay = `${index * 0.1}s`;
-    observer.observe(card);
-});
-
-// Observe contact list items
-const contactItems = document.querySelectorAll('.contact-list li');
-contactItems.forEach((item, index) => {
-    item.classList.add('fade-in');
-    item.style.transitionDelay = `${index * 0.08}s`;
-    observer.observe(item);
-});
-
 // Observe project cards
 const projectCards = document.querySelectorAll('.project-card');
 projectCards.forEach((card, index) => {
@@ -280,10 +256,13 @@ if (scrollIndicator) {
 // ============================================
 // Dynamic Year in Footer
 // ============================================
-const currentYearEl = document.getElementById('currentYear');
-if (currentYearEl) {
-    currentYearEl.textContent = new Date().getFullYear();
-}
+window.addEventListener('DOMContentLoaded', () => {
+    const footer = document.querySelector('.footer p');
+    if (footer) {
+        const currentYear = new Date().getFullYear();
+        footer.innerHTML = `&copy; ${currentYear} Megan Tee. Built with passion and code.`;
+    }
+});
 
 // ============================================
 // Performance: Reduce animations on slower devices
@@ -317,3 +296,30 @@ console.log('%c👋 Hey there! Thanks for checking out my portfolio!',
     'color: #667eea; font-size: 16px; font-weight: bold;');
 console.log('%cInterested in the code? Check it out on GitHub!',
     'color: #6b7280; font-size: 14px;');
+
+// ============================================
+// Contact Modal
+// ============================================
+const contactModal = document.getElementById('contact-modal');
+const contactButton = document.getElementById('contact-button');
+const contactLink = document.getElementById('contact-link');
+const closeButton = document.querySelector('.close-button');
+
+contactButton.addEventListener('click', () => {
+    contactModal.style.display = 'block';
+});
+
+contactLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    contactModal.style.display = 'block';
+});
+
+closeButton.addEventListener('click', () => {
+    contactModal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target == contactModal) {
+        contactModal.style.display = 'none';
+    }
+});
